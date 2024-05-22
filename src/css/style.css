@@ -1,0 +1,59 @@
+body {
+  background-color: hsl(218, 23%, 16%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: hsl(217, 19%, 24%);
+    max-width: 450px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+  }
+
+h1 {
+  color: hsl(150, 100%, 66%);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 15px;
+  margin-top: 30px;
+}
+.textoConselho {
+  font-size: 23px;
+  padding: 23px;
+  color: hsl(193, 38%, 86%);
+}
+
+.card picture .divisaoDesk {
+  width: 100%;
+}
+.btn-sort {
+  background-color: hsl(150, 100%, 66%);
+  border: none;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transform: translateY(85%);
+
+}
+.btn-sort:hover {
+  box-shadow: 0 5px 15px hsl(150, 100%, 66%);
+}
+
+/* cardfull
+card
+conselho
+numeroDoConselho
+textoConselho
+espacamento
+ */

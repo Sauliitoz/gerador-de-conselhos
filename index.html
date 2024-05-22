@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>FrontEnd Mentor - Gerador de conselhos</title>
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="card">
+      <div>
+        <h1 id="idConselho" class="numeroDoConselho"></h1>
+        <p id="descripConselho" class="textoConselho"></p>
+      </div>
+
+      <picture>
+        <source
+          media="(max-width: 768px)"
+          srcset="./src/img/pattern-divider-mobile.svg"
+        />
+        <img
+          class="divisaoDesk"
+          src="./src/img/pattern-divider-desktop.svg"
+          alt=""
+        />
+      </picture>
+
+      <button id="sort" class="btn-sort" type="submit">
+        <img src="./src/img/icon-dice.svg" alt="Face de um dado" />
+      </button>
+    </div>
+    <script src="./src/js/index.js"></script>
+  </body>
+</html>
