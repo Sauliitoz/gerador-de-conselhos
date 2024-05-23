@@ -1,3 +1,37 @@
+const dadosNum = document.getElementById("idConselho")
+const dadosDescricao = document.getElementById("descripConselho")
+const dadosBtn = document.getElementById("sort")
+
+async function PegarDado(){
+  try{
+    const resposta = await fetch("https://api.adviceslip.com/advice")
+
+    if(!resposta.ok){
+      throw new Error("Ocorreu um erro ao tentar buscar as informações da API",err)
+    }
+
+    const respostaFetch = await resposta.json()
+    const dadosId = `Advice #${respostaFetch.slip.id}`
+    const dadosTexto = `"${respostaFetch.slip.advice}"`
+
+    dadosNum.innerText = dadosId
+    dadosDescricao.innerText = dadosTexto
+
+  }catch(err){
+    console.error("Erro ao tentar buscar as informações da API", err);
+  }
+}
+
+dadosBtn.addEventListener('click', PegarDado);
+
+PegarDado()
+
+
+ 
+
+//Primeiro push
+
+/*
 const btn = document.querySelector("#sort");
 
 async function dados() {
@@ -17,5 +51,4 @@ async function injetarDados() {
 
 document.getElementById("sort").addEventListener("click",()=>{
     injetarDados()
-})
-injetarDados()
+})*/
